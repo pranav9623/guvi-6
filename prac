@@ -1,0 +1,15 @@
+"use strict";
+
+const getBlog = () => {
+  const xhr = new XMLHttpRequest();
+  xhr.open(
+    "GET",
+    "https://www.microverse.org/blog/how-to-loop-through-the-array-of-json-objects-in-javascript"
+  );
+  xhr.responseType = "json";
+  xhr.onload = () => {
+    console.log(xhr.response);
+  };
+
+  xhr.send();
+};
